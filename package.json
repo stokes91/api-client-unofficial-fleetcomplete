@@ -1,0 +1,20 @@
+{
+  "name": "api-client-unofficial-fleetcomplete",
+  "version": "1.0.0",
+  "description": "Unofficial library to receive asset gps locations from an eld provider, Fleet Complete.",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/stokes91/api-client-unofficial-fleetcomplete.git"
+  },
+  "author": "Alexander Stokes <stokes91@gmail.com>",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/stokes91/api-client-unofficial-fleetcomplete/issues"
+  },
+  "homepage": "https://github.com/stokes91/api-client-unofficial-fleetcomplete#readme",
+  "private": true
+}
