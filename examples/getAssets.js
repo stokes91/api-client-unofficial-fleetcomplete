@@ -68,7 +68,7 @@ if (require.main === module) {
         });
       }, 9.2 * 60 * 1000);
 
-      const gi = setInterval(() => {
+      const getAssets = () => {
         client.getAssets((err) => {
           if (err) {
             console.log('getAssets failed', client);
@@ -86,8 +86,13 @@ if (require.main === module) {
             };
           }));
         });
+      };
+
+      const gi = setInterval(() => {
+        getAssets();
       }, 5 * 60 * 1000);
 
+      process.nextTick(getAssets);
     });
   });
 }
