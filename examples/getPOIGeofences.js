@@ -67,24 +67,21 @@ if (require.main === module) {
       }, 9.2 * 60 * 1000);
 
       const getAssets = () => {
-        client.getAssets((err) => {
+        client.getPOIGeofences((err) => {
           if (err) {
-            console.log("getAssets failed", client);
+            console.log("getPOIGeofences failed", client);
             clearInterval(gi);
             clearInterval(ri);
             return;
           }
 
-          console.log(
-            client.assets.map((that) => {
-              const { description, latitude, longitude } = that;
-              return {
-                description,
-                latitude,
-                longitude,
-              };
-            })
-          );
+          const polygons = {};
+
+          client.poiGeofences.forEach((that) => {
+            polygons[that.description] = that.geoData;
+          });
+
+          console.log(polygons);
         });
       };
 

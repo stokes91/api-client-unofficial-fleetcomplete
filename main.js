@@ -14,4 +14,4 @@
    limitations under the License.
 */
 
-module.exports = require('./lib/Client');
+module.exports = require("./lib/Client");
